@@ -2,26 +2,25 @@
 {
   programs.neovim = {
     enable = true;
+    plugins = with pkgs.vimPlugins; [
+        lazy-nvim
+    ];
   };
-
-  xdg.configFile."nvim" = {
-    source = lazyvim;
-    recursive = true;
-  };
+  
   xdg.configFile."nvim/lua/plugins/colorscheme.lua".text = "
     return {
       {
-        "ellisonleao/gruvbox.nvim",
+        'ellisonleao/gruvbox.nvim',
         opts = {
-          contrast = "hard",  
+          contrast = 'hard',  
           transparent_mode = false,
         },
       },
 
       {
-        "LazyVim/LazyVim",
+        'LazyVim/LazyVim',
         opts = {
-          colorscheme = "gruvbox",
+          colorscheme = 'gruvbox',
         },
       },
     }

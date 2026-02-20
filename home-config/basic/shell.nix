@@ -18,7 +18,7 @@
         "HIST_IGNORE_DUPS"
         "AUTO_LIST"
       ];
-      initExtra ="bindkey -v";
+      initContent ="bindkey -v";
       oh-my-zsh = {
         enable = true;
         plugins = [
