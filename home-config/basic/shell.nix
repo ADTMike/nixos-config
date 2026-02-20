@@ -29,6 +29,5 @@
     };
     tmux.enable = true;
   };
-  home.shell.enableZshIntegration = true;
-  
+    
 }
