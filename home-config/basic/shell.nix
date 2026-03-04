@@ -30,9 +30,16 @@
     tmux = { 
       enable = true;
       escapeTime = 0;
+      keyMode = "vi";
       plugins = with pkgs; [
         tmuxPlugins.gruvbox
       ];
+      extraConfig = "
+      bind h select-pane -L
+      bind j select-pane -D
+      bind k select-pane -U
+      bind l select-pane -R
+      ";
     };
   };
     
