@@ -27,7 +27,13 @@
         theme = "kafeitu";
       };
     };
-    tmux.enable = true;
+    tmux = { 
+      enable = true;
+      escapeTime = 0;
+      plugins = with pkgs; [
+        tmuxPlugins.gruvbox
+      ];
+    };
   };
     
 }
