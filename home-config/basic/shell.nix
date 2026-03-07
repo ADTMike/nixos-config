@@ -31,8 +31,10 @@
       enable = true;
       escapeTime = 0;
       keyMode = "vi";
-      plugins = with pkgs; [
-        tmuxPlugins.gruvbox
+      shell ="/home/default/.nix-profile/bin/zsh";
+      plugins = with pkgs.tmuxPlugins; [
+        gruvbox
+        resurrect
       ];
       extraConfig = "
       bind h select-pane -L
@@ -41,6 +43,7 @@
       bind l select-pane -R
       ";
     };
+    htop.enable = true;
   };
     
 }
