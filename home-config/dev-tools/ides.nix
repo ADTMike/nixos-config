@@ -1,5 +1,10 @@
 { config, pkgs, ...}:
-{
+{ 
+  home.packages = with pkgs;[
+    sqls
+    sql-formatter
+  ];
+
   programs.neovim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
@@ -23,6 +28,11 @@
           colorscheme = 'gruvbox',
         },
       },
+    }
+  ";
+  xdg.configFile."nvim/lua/plugins/sql.lua".text = "
+    return {
+      { import = 'lazyvim.plugins.extras.lang.sql' },
     }
   ";
 }
