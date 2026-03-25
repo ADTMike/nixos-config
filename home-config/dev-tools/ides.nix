@@ -3,6 +3,7 @@
   home.packages = with pkgs;[
     sqls
     sql-formatter
+    sqlfluff
   ];
 
   programs.neovim = {
