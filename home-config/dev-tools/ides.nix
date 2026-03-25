@@ -30,9 +30,4 @@
       },
     }
   ";
-  xdg.configFile."nvim/lua/plugins/sql.lua".text = "
-    return {
-      { import = 'lazyvim.plugins.extras.lang.sql' },
-    }
-  ";
 }
