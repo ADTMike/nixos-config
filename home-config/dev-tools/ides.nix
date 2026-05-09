@@ -28,7 +28,18 @@
         opts = {
           colorscheme = 'gruvbox',
         },
-      },
+      },{
+        'rmagatti/auto-session',
+        lazy = false,
+
+        ---enables autocomplete for opts
+        ---@module 'auto-session'
+        ---@type AutoSession.Config
+        opts = {
+          allowed_dirs = { '~/environment/**', '~/workspace/**', '/etc/nixos/*'},
+          -- log_level = 'debug',
+        },
+      }
     }
   ";
 }
