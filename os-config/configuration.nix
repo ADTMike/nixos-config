@@ -24,8 +24,8 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  
-  networking.firewall.allowedTCPPorts = [ 19000 19001 8081 ];
+
+  networking.firewall.allowedTCPPorts = [ 3000 19000 19001 8081 ];
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
 

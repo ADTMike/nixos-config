@@ -5,6 +5,7 @@
   imports = [
    ./basic/default.nix
    ./dev-tools/default.nix
+   ./security/default.nix
    ./common.nix
   ];
   home.stateVersion = "25.11";

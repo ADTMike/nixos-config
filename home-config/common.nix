@@ -9,6 +9,7 @@
     ripgrep
     fd
     nerd-fonts.zed-mono
+    home-manager
   ];
   fonts.fontconfig.enable =true;
 }

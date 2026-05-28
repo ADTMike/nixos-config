@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  programs = {
+   programs = {
     ghostty = {
       enable = true;
       enableZshIntegration = true;
@@ -43,7 +43,13 @@
       bind l select-pane -R
       ";
     };
-    htop.enable = true;
   };
-    
+home.packages = with pkgs; [
+    btop
+  ];
+  xdg.configFile."btop/btop.conf".text = ''
+    color_theme = "gruvbox_dark_v2"
+    vim_keys = true
+  '';
+  
 }
