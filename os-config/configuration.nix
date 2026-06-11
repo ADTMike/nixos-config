@@ -85,6 +85,7 @@
       konsole
       plasma-browser-integration
       kate
+      qrca
   ];
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
