@@ -5,5 +5,6 @@
     ./ides.nix
     ./compilers.nix
     ./sdks.nix
+    ./ai.nix
   ];
 }

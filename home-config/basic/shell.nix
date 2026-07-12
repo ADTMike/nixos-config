@@ -31,10 +31,11 @@
       enable = true;
       escapeTime = 0;
       keyMode = "vi";
-      shell ="/home/default/.nix-profile/bin/zsh";
+      shell = "${pkgs.zsh}/bin/zsh";
       plugins = with pkgs.tmuxPlugins; [
         gruvbox
         resurrect
+        continuum
       ];
       extraConfig = "
       bind h select-pane -L

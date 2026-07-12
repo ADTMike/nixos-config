@@ -4,7 +4,6 @@
     sqls
     sql-formatter
     sqlfluff
-    ollama
   ];
 
   programs.neovim = {
@@ -17,6 +16,7 @@
       require("lazy").setup({
         spec = {
           { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+          { import = "lazyvim.plugins.extras.ai.avante" },
           { import = "plugins" },
         },
         defaults = {
@@ -31,7 +31,6 @@
       })
     '';
   };
-
   xdg.configFile = {
     "nvim/lua/plugins/colorscheme.lua".text = ''
       return {
@@ -51,30 +50,26 @@
       }
     '';
 
-    "nvim/lua/plugins/codecompanion.lua".text = ''
-  return {
-    {
-      "olimorris/codecompanion.nvim",
-      lazy = false,
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-treesitter/nvim-treesitter",
-      },
-      opts = {
-        strategies = {
-          chat = {
-            adapter = "ollama",
-          },
-          inline = {
-            adapter = "ollama",
+    "nvim/lua/plugins/avante.lua".text = ''
+      return {
+        {
+          "yetone/avante.nvim",
+          opts = {
+            provider = "ollama",
+            providers = {
+              ollama = {
+                endpoint = "http://127.0.0.1:11434",
+                model = "glm-5.2:cloud",
+                is_env_set = require("avante.providers.ollama").check_endpoint_alive,
+                timeout = 60000,
+              },
+            },
           },
         },
-      },
-    },
-  }
-'';
+      }
+    '';
 
-"nvim/lua/plugins/auto-session.lua".text = ''
+    "nvim/lua/plugins/auto-session.lua".text = ''
       return {
         {
           "rmagatti/auto-session",

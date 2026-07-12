@@ -3,7 +3,7 @@ let
   androidComposition = pkgs.androidenv.composeAndroidPackages {
     platformVersions = [ "34" ];
     buildToolsVersions = [ "34.0.0" ];
-    abiVersions = [ "x86_64" ];
+    abiVersions = [ "x86_64" "arm64-v8a" ];
   };
 in
 {
@@ -14,6 +14,7 @@ in
   home.packages = with pkgs; [
     watchman
     jdk17
+    android-tools
     androidComposition.androidsdk
     gradle
   ];

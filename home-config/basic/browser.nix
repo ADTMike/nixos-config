@@ -7,6 +7,7 @@
         "https://mail.google.com"
         "https://github.com"
         "https://chat.deepseek.com"
+        "https://www.reddit.com"
       ];
     };
   };

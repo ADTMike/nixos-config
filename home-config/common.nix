@@ -1,6 +1,6 @@
 { config, pkgs, ...}:
 {
-  home.packages = with pkgs; [	
+  home.packages = with pkgs; [
     git
     curl
     lazygit
@@ -8,7 +8,12 @@
     fzf
     ripgrep
     fd
+    jq
+    unzip
+    bat
+    eza
+    zoxide
     nerd-fonts.zed-mono
-      ];
-  fonts.fontconfig.enable =true;
+  ];
+  fonts.fontconfig.enable = true;
 }
