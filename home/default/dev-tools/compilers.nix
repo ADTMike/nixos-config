@@ -5,7 +5,6 @@
     nodejs_24
     gcc
     python3
-    nodePackages.corepack
   ];
   
   programs = {

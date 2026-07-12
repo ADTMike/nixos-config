@@ -16,14 +16,19 @@
   {
     nixosConfigurations.master = nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = { inherit system; };
       modules = [
-        ./os-config/configuration.nix
+        ./hosts/master/configuration.nix
         home-manager.nixosModules.home-manager
+        {
+          nixpkgs.config = {
+            allowUnfree = true;
+            android_sdk.accept_license = true;
+          };
+        }
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.default = import ./home-config/home.nix;
+          home-manager.users.default = import ./home/default/home.nix;
         }
       ];
     };
