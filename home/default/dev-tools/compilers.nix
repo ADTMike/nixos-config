@@ -5,6 +5,9 @@
     nodejs_24
     gcc
     python3
+    cmake
+    gnumake
+    llvm
   ];
   
   programs = {
