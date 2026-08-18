@@ -6,7 +6,8 @@
       enableZshIntegration = true;
       settings = {
         theme = "Gruvbox Dark Hard";
-        window-padding-x=10;
+        window-padding-x = 10;
+        window-padding-y = 10;
       };
     };
     zsh = {

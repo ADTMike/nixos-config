@@ -23,7 +23,7 @@
           lazy = true,
         },
         checker = {
-          enabled = true,
+          enabled = false,
         },
         change_detection = {
           notify = false,

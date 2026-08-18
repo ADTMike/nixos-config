@@ -1,8 +1,10 @@
-{ config,pkgs, ... }:
+{ config, pkgs, ... }:
 {
-	home.packages = with pkgs; [
- 		kdePackages.kcalc
-		kdePackages.dragon
-		libreoffice
+  home.packages = with pkgs; [
+    qalculate-gtk
+    celluloid
+    imv
+    thunar
+    libreoffice
   ];
 }
