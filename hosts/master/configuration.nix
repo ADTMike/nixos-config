@@ -13,7 +13,7 @@
   networking.networkmanager.enable = true;
   networking.firewall.allowedTCPPorts = [ 3000 19000 19001 8081 ];
 
-  time.timeZone = "America/Los_Angeles";
+  time.timeZone = "Etc/GMT-1";
 
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
@@ -42,6 +42,8 @@
 
   environment.systemPackages = [ pkgs.swayfx ];
   programs.zsh.enable = true;
+
+  services.upower.enable = true;
 
   services.greetd = {
     enable = true;

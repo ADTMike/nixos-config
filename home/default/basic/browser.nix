@@ -8,6 +8,7 @@
         "https://github.com"
         "https://chat.deepseek.com"
         "https://www.reddit.com"
+        "https://yandex.com/"
       ];
     };
   };

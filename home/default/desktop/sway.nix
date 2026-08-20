@@ -35,6 +35,7 @@ in
     input type:touchpad {
         tap enabled
         natural_scroll disabled
+        drag_lock disabled
     }
     seat * xcursor_theme Adwaita 24
 
@@ -48,6 +49,8 @@ in
 
     # Autostart
     exec noctalia
+    exec sleep 2 && noctalia msg wallpaper-set /home/default/Wallpapers/wallpaper.jpg
+    exec sleep 2 && noctalia msg nightlight-force-toggle
 
     # Applications
     bindsym $mod+t exec ${terminal}
@@ -122,6 +125,8 @@ in
     bindsym --locked XF86AudioMute exec $ipc volume-mute
     bindsym --locked XF86MonBrightnessUp exec $ipc brightness-up
     bindsym --locked XF86MonBrightnessDown exec $ipc brightness-down
+    bindsym --locked XF86AudioMicMute exec $ipc mic-mute
+
     bindsym XF86AudioNext exec $ipc media next
     bindsym XF86AudioPause exec $ipc media toggle
     bindsym XF86AudioPlay exec $ipc media toggle

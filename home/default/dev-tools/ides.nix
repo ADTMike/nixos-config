@@ -4,6 +4,7 @@
     sqls
     sql-formatter
     sqlfluff
+    gopls
   ];
 
   programs.neovim = {
@@ -17,6 +18,7 @@
         spec = {
           { "LazyVim/LazyVim", import = "lazyvim.plugins" },
           { import = "lazyvim.plugins.extras.ai.avante" },
+          { import = "lazyvim.plugins.extras.lang.go" },
           { import = "plugins" },
         },
         defaults = {
