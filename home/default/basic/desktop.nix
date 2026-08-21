@@ -4,7 +4,6 @@
     qalculate-gtk
     celluloid
     imv
-    thunar
     libreoffice
   ];
 }

@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 let
   terminal = "ghostty";
-  fileManager = "thunar";
+  fileManager = "ghostty -e yazi";
   browser = "librewolf";
   mod = "Mod4";
   ipc = "noctalia msg";
@@ -40,7 +40,6 @@ in
     seat * xcursor_theme Adwaita 24
 
     # Window rules
-    for_window [class="thunar"] floating enable, resize set width 900 height 700
     for_window [class="qalculate-gtk"] floating enable, resize set width 500 height 400
     for_window [class="imv"] floating enable, resize set width 600 height 500
     for_window [class="celluloid"] floating enable, resize set width 800 height 600

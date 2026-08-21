@@ -8,7 +8,6 @@
    ./security/default.nix
    ./infra/default.nix
    ./desktop/default.nix
-   ./common.nix
   ];
   home.stateVersion = "26.05";
 }
