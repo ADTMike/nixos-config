@@ -10,5 +10,10 @@
     };
   };
 
-  xdg.configFile."yazi/theme.toml".source = ./theme.toml;
+  xdg.configFile."yazi/theme.toml".text = ''
+    [flavor]
+    dark = "gruvbox-dark"
+  '';
+
+  xdg.configFile."yazi/flavors/gruvbox-dark.yazi".source = ./tmp/gruvbox-dark.yazi;
 }

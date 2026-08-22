@@ -21,6 +21,7 @@ in
     # SwayFX
     corner_radius 8
     smart_corner_radius enable
+    default_dim_inactive 0.5
 
     # Colors
     client.focused #f2e5bb #f2e5bb #282828
